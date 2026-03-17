@@ -14,7 +14,7 @@ const corsOptions = {
   origin: [
     'http://localhost:3000',
     // 替换成：https://zeyuzhang0623-CP.github.io
-    'https://talent-test-123.github.io'
+    'https://zeyuzhang0623-CP.github.io'
   ],
   credentials: true
 };
@@ -22,7 +22,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 // 连接MongoDB数据库
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(mongodb+srv://zeyuzhang0623_db_user:zzy880623@cluster0.fq4v4vl.mongodb.net/?appName=Cluster0)
   .then(() => console.log('MongoDB连接成功 ✅'))
   .catch(err => console.error('MongoDB连接失败 ❌:', err));
 
